@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --lightpurple:  hsl(254, 88%, 90%);
+    --darkpurple: hsl(256, 67%, 59%);
+    --lightyellow: hsl(31, 66%, 93%);
+    --darkyellow: hsl(39, 100%, 71%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    padding: 1.5rem;
+}
+
+body{
+    font-family: "DM Sans" sans-serif;
+    display: grid;
+    background-color: var(--white);
+    justify-content: center;
+    font-weight: bold;
+}
+
+.Bentogrid{
+    max-width: 1440px;
+    display: grid;
+    grid-template-areas: 
+    "grid7 grid1 grid1 grid4"
+    "grid7 grid2 grid3 grid4"
+    "grid8 grid6 grid5 grid5";
+    grid-auto-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem;
+}
+
+.Bentogrid .grid{
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.Bentogrid .grid:nth-child(1){
+    grid-area: grid1;
+    background-color: var(--darkpurple);
+    color: var(--white);
+}
+.social{
+    font-size: 4rem;
+}
+.number{
+    color: var(--darkyellow);
+}
+.Bentogrid .grid:nth-child(2){
+    grid-area: grid2;
+    background-color: whitesmoke;
+    color: var(--black);
+    font-size: 2rem;
+}
+.Bentogrid .grid:nth-child(3){
+    grid-area: grid3;
+    background-color: var(--darkyellow);
+    color: var(--black);
+    font-size: 2rem;
+}
+.Bentogrid .grid:nth-child(4){
+    grid-area: grid4;
+    background-color: var(--lightpurple);
+    color: var(--black);
+    font-size: 3rem;
+}
+.bottom{
+    font-size: 1.2rem;
+}
+.Bentogrid .grid:nth-child(5){
+    grid-area: grid5;
+    background-color: var(--darkpurple);
+    color: var(--white);
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2rem;
+}
+.Bentogrid .grid:nth-child(6){
+    grid-area: grid6;
+    background-color: whitesmoke;
+    color: var(--black);
+    font-size: 1.5rem;
+}
+.percent{
+    font-size: 5rem;
+}
+.Bentogrid .grid:nth-child(7){
+    grid-area: grid7;
+    background-color: var(--lightyellow);
+    color: var(--black);
+    font-size: 2.4rem;
+}
+.speed{
+    color: var(--darkpurple);
+}
+.Bentogrid .grid:nth-child(8){
+    grid-area: grid8;
+    background-color: var(--darkyellow);
+    color: var(--black);
+    font-size: 2rem;
+}
+.attribution{
+    justify-content: center; 
+    text-align: center;
+    padding: 0 auto;
+    font-size: 1rem;
+    border-right: 30rem;
+
+}
+
+/* Media query for mobile  (smaller than 640px) */
+@media (max-width: 640px) {
+    .Bentogrid{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    .Bentogrid .grid:nth-child(5){
+        display: flex;
+        flex-direction: column;
+    }
+    .attribution{
+        text-align: center;
+    }
+}
+
+
+/* Media query for tablet  (from 641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px){
+    .Bentogrid{
+    max-width: 64px;
+    display: grid;
+    grid-template-areas: 
+   "grid1 grid1"
+   "grid2 grid4"
+   "grid3 grid4"
+   "grid5 grid5"
+   "grid6 grid7"
+   "grid8 grid7";
+    grid-auto-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem;
+    justify-content: center;
+    }
+}
+
+
+/* Media query for larger screen  (from 1025px and above) */
+@media (min-width: 1025px){
+    .Bentogrid{
+    max-width: 1440px;
+    display: grid;
+    grid-template-areas: 
+    "grid7 grid1 grid1 grid4"
+    "grid7 grid2 grid3 grid4"
+    "grid8 grid6 grid5 grid5";
+    grid-auto-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem;
+    justify-content: center;
+    }
+}
